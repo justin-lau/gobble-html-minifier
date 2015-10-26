@@ -1,6 +1,6 @@
 # gobble-html-minifer
 
-[![npm](https://badge.fury.io/js/justin-lau%2Fgobble-html-minifier.svg)](https://www.npmjs.com/package/gobble-html-minifier)
+[![npm](https://badge.fury.io/js/gobble-html-minifier.svg)](https://www.npmjs.com/package/gobble-html-minifier)
 [![Build Status](https://img.shields.io/travis/justin-lau/gobble-html-minifier/master.svg)](https://travis-ci.org/justin-lau/gobble-html-minifier)
 [![Coverage Status](https://img.shields.io/coveralls/justin-lau/gobble-html-minifier/master.svg)](https://coveralls.io/github/justin-lau/gobble-html-minifier?branch=master)
 [![Dependencies](https://david-dm.org/justin-lau/gobble-html-minifier/master.svg)](https://david-dm.org/justin-lau/gobble-html-minifier/master)
