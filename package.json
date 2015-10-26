@@ -1,0 +1,55 @@
+{
+  "name": "gobble-html-minifier",
+  "version": "0.1.0",
+  "description": "Use html-minifier with gobble",
+  "main": "dist/index.js",
+  "scripts": {
+    "mocha": "mocha --compilers js:babel/register -- tests/*.spec.js",
+    "lint": "eslint src tests",
+    "test:watch": "chokidar 'src/**/.js' 'tests/**/*.js' -c 'npm run -s lint && npm run -s mocha'",
+    "coverage": "babel-node ./node_modules/.bin/isparta cover node_modules/.bin/_mocha -- --reporter dot tests/*.spec.js",
+    "start": "npm run -s test; npm run -s test:watch",
+    "test": "npm run -s lint && npm run -s mocha",
+    "build": "ENV=production babel-node ./node_modules/.bin/gobble build --force dist",
+    "prepublish": "npm run -s test && npm run -s build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justin-lau/gobble-html-minifier.git"
+  },
+  "keywords": [
+    "gobble-plugin",
+    "html-minifier"
+  ],
+  "author": "Justin Lau <justin@tclau.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/justin-lau/gobble-html-minifier/issues"
+  },
+  "homepage": "https://github.com/justin-lau/gobble-html-minifier#readme",
+  "dependencies": {
+    "html-minifier": "^1.0.0",
+    "lodash-node": "^3.10.1"
+  },
+  "devDependencies": {
+    "babel": "^5.8.29",
+    "babel-eslint": "^4.1.3",
+    "chai": "^3.4.0",
+    "chai-as-promised": "^5.1.0",
+    "chai-fs": "github:jenius/chai-fs#8822feb",
+    "chokidar": "^1.2.0",
+    "chokidar-cli": "^1.1.0",
+    "coveralls": "^2.11.4",
+    "eslint": "^1.7.3",
+    "eslint-config-airbnb": "^0.1.0",
+    "eslint-plugin-react": "^3.6.3",
+    "gobble": "^0.10.2",
+    "gobble-babel": "^5.5.8",
+    "gobble-cli": "^0.6.0",
+    "gobble-uglifyjs": "^0.2.1",
+    "isparta": "^3.1.0",
+    "mocha": "^2.3.3",
+    "parallelshell": "^2.0.0",
+    "sander": "^0.4.0"
+  }
+}

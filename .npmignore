@@ -1,0 +1,6 @@
+.gobble/
+.gobble-build/
+coverage/
+node_modules/
+tmp/
+npm-debug.log
