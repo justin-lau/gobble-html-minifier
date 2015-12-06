@@ -14,8 +14,8 @@ const presets = {
     useShortDoctype: true,
     removeEmptyAttributes: true,
     removeOptionalTags: true,
-    minifyJs: true,
-    minifyCss: true,
+    minifyJS: true,
+    minifyCSS: true,
   },
   safe: {
     removeComments: true,
@@ -33,8 +33,8 @@ const presets = {
     removeStyleLinkTypeAttributes: true,
     caseSensitive: true,
     keepClosingSlash: true,
-    minifyJs: true,
-    minifyCss: true,
+    minifyJS: true,
+    minifyCSS: true,
   },
   all: {
     removeComments: true,
@@ -54,8 +54,8 @@ const presets = {
     removeStyleLinkTypeAttributes: true,
     caseSensitive: true,
     keepClosingSlash: true,
-    minifyJs: true,
-    minifyCss: true,
+    minifyJS: true,
+    minifyCSS: true,
   },
 };
 
