@@ -98,5 +98,31 @@ describe('options', () => {
 
       outputPath('original.html').should.have.content.that.match(/<!-- \/\.container -->/);
     });
+
+    it('should minify inline JavaScripts and CSS by default', async () => {
+      await getFixtureNode('single/index.html')
+        .transform(htmlminifier, { preset: 'minimal' })
+        .build(buildConfig);
+
+      outputPath('index.html')
+        .should.have.content.that.match(/body{background-color:#6495ed}/)
+        .and.have.content.that.match(/jQuery\(function\(c\)\{c\("body"\)\.css\(\{"background-color":"aliceblue"\}\)\}\)/);
+
+      await getFixtureNode('single/index.html')
+        .transform(htmlminifier, { preset: 'safe' })
+        .build(buildConfig);
+
+      outputPath('index.html')
+        .should.have.content.that.match(/body{background-color:#6495ed}/)
+        .and.have.content.that.match(/jQuery\(function\(c\)\{c\("body"\)\.css\(\{"background-color":"aliceblue"\}\)\}\)/);
+
+      await getFixtureNode('single/index.html')
+        .transform(htmlminifier, { preset: 'all' })
+        .build(buildConfig);
+
+      outputPath('index.html')
+        .should.have.content.that.match(/body{background-color:#6495ed}/)
+        .and.have.content.that.match(/jQuery\(function\(c\)\{c\("body"\)\.css\(\{"background-color":"aliceblue"\}\)\}\)/);
+    });
   });
 });

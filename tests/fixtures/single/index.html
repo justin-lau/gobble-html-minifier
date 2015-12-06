@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <title>HTML Minifier Tests</title>
     <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-1.19.0.css">
+    <style>
+      body {
+        background-color: cornflowerblue;
+      }
+    </style>
     <script src="https://code.jquery.com/qunit/qunit-1.19.0.js"></script>
     <script src="../assets/cleancss-browser.js"></script>
     <script src="../assets/relateurl-browser.js"></script>
@@ -17,5 +22,12 @@
     <div id="qunit-fixture"></div>
 
     <script src="minifier.js"></script>
+    <script type="text/javascript">
+      jQuery(function($) {
+        $('body').css({
+          'background-color': 'aliceblue',
+        });
+      });
+    </script>
   </body>
 </html>
